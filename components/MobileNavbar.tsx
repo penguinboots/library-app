@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
@@ -20,9 +20,9 @@ const MobileNavbar = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <Button variant="secondary" size="icon" className="md:hidden">
+        <div className="h-10 w-10 rounded-lg bg-pink-50 flex items-center justify-center text-pink-300">
           <Menu />
-        </Button>
+        </div>
       </SheetTrigger>
       <SheetContent side="left" className="p-0">
         <SideBar />
