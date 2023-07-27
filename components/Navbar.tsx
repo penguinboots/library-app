@@ -10,7 +10,7 @@ import { BookCopy, Home, Search } from "lucide-react";
 import MobileNavbar from "./MobileNavbar";
 
 const quicksand = Quicksand({
-  weight: "600",
+  weight: "700",
   subsets: ["latin"],
 });
 
@@ -60,11 +60,11 @@ export const Navbar = () => {
           <Link
             href={route.href}
             key={route.href}
-            className="text-md flex p-3 items-center justify-center cursor-pointer
+            className="text-md font-bold flex p-3 items-center justify-center cursor-pointer
              text-pink-400 hover:text-pink-500 hover:bg-pink-500/10
               rounded-lg transition"
           >
-            <div className="flex items-center flex-1">
+            <div className={cn("flex items-center flex-1", quicksand.className)}>
               <route.icon className="h-6 w-6 mr-3" />
               {route.label}
             </div>
