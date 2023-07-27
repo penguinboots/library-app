@@ -8,36 +8,43 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
-import { Comfortaa } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import localFont from "next/font/local";
 
-const font = Comfortaa({
+const quicksand = Quicksand({
   weight: "600",
   subsets: ["latin"],
 });
+
+const borel = localFont({
+  src: [
+    {path: '../public/fonts/Borel-Regular.ttf'}
+  ]
+})
 
 export const Navbar = () => {
   return (
     <nav className="p-4 bg-pink-300 flex items-center justify-between">
       <Link href="/home" className="flex items-center">
         <div className="relative h-12 w-12">
-          <Image src="/logo.svg" alt="Logo" fill/>
+          <Image src="/logo.svg" alt="Logo" fill />
         </div>
-        <h1 className={cn("text-2xl font-bold text-white", font.className)}>
+        <h1 className={cn("text-3xl font-bold text-white pt-6", borel.className)}>
           Genki&apos;s
         </h1>
       </Link>
-      <NavigationMenu>
+      <NavigationMenu className={cn("", quicksand.className)}>
         <NavigationMenuList className="flex items-center gap-x-2">
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Search Books
+              SEARCH
             </NavigationMenuLink>
           </Link>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              My Shelf
+              SHELF
             </NavigationMenuLink>
           </Link>
           <UserButton afterSignOutUrl="/" />
