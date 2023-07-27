@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import { BookCopy, Home, Search } from "lucide-react";
-import Link from "next/link";
 
 const routes = [
   {

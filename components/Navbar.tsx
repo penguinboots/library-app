@@ -1,11 +1,11 @@
 "use client";
 
-import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import { Quicksand } from "next/font/google";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import localFont from "next/font/local";
+import Image from "next/image";
+import { Quicksand } from "next/font/google";
+import { UserButton } from "@clerk/nextjs";
+import { cn } from "@/lib/utils";
 import { BookCopy, Home, Search } from "lucide-react";
 import MobileNavbar from "./MobileNavbar";
 
